@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winter Clothing Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/dist/main.css" rel="stylesheet">
+</head>
+<body>
+ 
+<!-- Navbar -->
+<nav class=" bg-black navbar navbar-expand-lg navbar-dark justify-content-between ">
+    <span class=" text-2xl text-sky-500"> Winter Market</span>  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="" id="navbarNav">
+        <ul class="  navbar-nav ml-auto">
+            <li class="nav-item ">
+                <a class="nav-link text-white" href="home.html">Home</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link text-white" href="Product.html">Products</a>
+            </li>
+           >
+         <li class="nav-item font-bold">
+            <a class="nav-link font-bold text-white" href="signup.html">Login-Signup</a>
+        </li>
+  
+         </li class="nav-item ">
+           <span class="nav-link text-white">cart</span> <span class=" nav-link text-white cart " onclick="checkOut()">0</span>
+        </li> 
+        </ul>
+    </div>
+</nav>
+
+ <div class="bg-light text-dark p-10">
+    
+
+    <h1 class="text-4xl text-center p-10">Welcome to <span class=" font-bold  text-sky-500"> Winter Market</span>  Where Style Meets Comfort!</h1>
+ <p class="text-2xl text-center ">We believe that fashion should be accessible to everyone. 
+    <p class="text-2xl text-center m-2">Our diverse range of sizes and inclusive designs celebrate the beauty of every body type. No matter your shape or size, we have the perfect outfit to make you feel confident and empowered.</p>
+</div>
+
+<!-- Main Content -->
+<div class="container mx-auto ">
+    <!-- Winter Products Section -->
+    <div class="feature-product  " id="feature-card ">
+        <h2 class="2xl text-center mt-4 text-center   text-4xl">FEATURED PRODUCTS</h2> <br> 
+        <div class=" feature-card-wrapper d-flex justify-content-between  ">
+            <div class="feature-card  text-center ">
+                <h3 >Urban Comfort  </h3>
+                <img src="./images/9.5.jfif" class="img-thumbnail" alt="...">
+                <p>
+                    Buy High Quality Urban Comfort Cozy Hoodies for Men
+                </p>
+                <a  href="Product.html" class="btn btn-primary ">SEE MORE</a> 
+                <!-- <button style=" text-decoration: none; border: 2px solid rgb(3, 89, 250)" class="btn "> <a  href="#heading-2">SEE MORE</a></button> -->
+            </div>
+            <div class="feature-card text-center  ">
+                <h3>Metro Lounge </h3>
+                <img src="./images/11.jfif" class="img-thumbnail" alt="...">
+                <p>
+                    Buy High Quality Metro Lounge Attire Hoodies for Men
+                </p>
+                <a  href="Product.html" class="btn btn-primary ">SEE MORE</a> 
+                <!-- <button style=" text-decoration: none; border: 2px solid rgb(3, 89, 250)" class="btn "> <a  href="#heading-2">SEE MORE</a></button> -->
+            </div>
+            <div class="feature-card text-center ">
+                <h3>ZenZone Zip-Up </h3>
+                <img src="./images/11.5.jfif" class="img-thumbnail" alt="...">
+                <p id="see-more-text">
+                    Buy High Quality ZenZone Zip-Up Hoodies for Men
+                </p>
+                <a  href="Product.html" class="btn btn-primary ">SEE MORE</a> 
+                <!-- <button style=" text-decoration: none; border: 2px solid rgb(3, 89, 250)" class="btn "> <a  href="#heading-2">SEE MORE</a></button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Bootstrap JS and jQuery (Make sure to include these scripts at the end of the body) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- Your custom JavaScript file -->
+
+
+
+
+
+<footer class="mt-10 bg-black">
+  
+    <div class="additional-info" >
+        <p>&copy; 2023 Winter market . All rights reserved.</p>
+        <p>Privacy Policy | Terms of Service</p>
+      </div>
+  </footer>
+
+<script src="index.js">
+  </script>
+</body>
+</html>

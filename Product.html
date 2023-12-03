@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winter Clothing Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/dist/main.css" rel="stylesheet">
+</head>
+<body>
+ 
+<!-- Navbar -->
+<nav class=" bg-black navbar navbar-expand-lg navbar-dark justify-content-between ">
+    <span class=" text-2xl text-sky-500"> Winter Market</span>  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="" id="navbarNav">
+        <ul class="  navbar-nav ml-auto">
+            <li class="nav-item ">
+                <a class="nav-link text-white" href="Home.html">Home</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link text-white" href="#">Products</a>
+            </li>
+          
+         <li class="nav-item font-bold">
+            <a class="nav-link font-bold text-white" href="signup.html">Login-Signup</a>
+        </li>
+  
+         </li class="nav-item ">
+           <span class="nav-link text-white">cart</span> <span class=" nav-link text-white cart " onclick="checkOut()">0</span>
+        </li> 
+        </ul>
+    </div>
+</nav>
+
+ 
+
+<div class="container mx-auto  " > </div>   
+    <h2 id="heading-2" class="text-center mt-10  text-4xl">OUR PRODUCTS</h2><br>
+    <div class=" feature-card-wrapper d-flex justify-content-between" >
+        <div class=" product  feature-card seller-card text-center">
+            <h3>
+                Astroworld Hoodie
+            </h3>
+            <img src="./images/1.jfif" class="img-thumbnail" id="img" alt="...">
+            <p >
+                Stay cozy and stylish this winter with our Astroworld Hoodie. 
+            </p>
+            <p>Price: $100</p>
+  <button class="btn btn-primary" onclick="addToCart('  Astroworld Hoodie', 100)"> Add to Cart</button>
+        </div>
+       
+        <div class=" product feature-card text-center">
+            <h3>
+                Winter Whisper 
+            </h3>
+            <img src="./images/3.jfif" class="img-thumbnail" id="img" alt="...">
+            <p>
+                Stay cozy and stylish this winter with our  Winter Whisper  Hoodie. 
+            </p>
+            <p>Price: $200</p>
+            <button class="btn btn-primary" onclick="addToCart('Winter Whisper ', 200)"> Add to Cart</button>           
+         </div> 
+         <div class=" product feature-card text-center">
+            <h3>
+                Icicle Embrace
+            </h3>
+            <img src="./images/6.5.jfif" class="img-thumbnail" id="img" alt="...">
+            <p>
+                Stay cozy and stylish this winter with our Icicle Embrace Hoodie. 
+            </p>
+            <p>Price: $200</p>
+            <button  class="btn btn-primary" onclick="addToCart('Icicle Embrace', 200 )">Add to Cart</button>   
+                   
+         </div> 
+    </div>
+</div>
+
+
+
+<div class=" feature-card-wrapper d-flex justify-content-between" >
+   
+    <div class="  product feature-card text-center"  >
+        <h3>
+            Blizzard Bliss 
+        </h3>
+        <img src="./images/2.jfif" class="img-thumbnail" id="img" alt="...">
+        <p>
+            Stay cozy and stylish this winter with our Blizzard Bliss HoodieHoodie. 
+        </p>
+        <p>Price: $150</p>
+        <button class="btn btn-primary" onclick="addToCart('Blizzard Bliss ', 150)"> Add to Cart</button>            
+    </div>
+    <div class=" product feature-card text-center">
+        <h3>
+            Frost Fashion
+        </h3>
+        <img src="./images/3.jfif" class="img-thumbnail" id="img" alt="...">
+        <p>
+            Stay cozy and stylish this winter with our Nordic Frost Fashion Hoodie. 
+        </p>
+        <p>Price: $200</p>
+        <button class="btn btn-primary" onclick="addToCart('Frost Fashion', 200)"> Add to Cart</button>           
+     </div> 
+     <div class=" product feature-card text-center">
+        <h3>
+            Winter Wonderland 
+        </h3>
+        <img src="./images/6.5.jfif" class="img-thumbnail" id="img" alt="...">
+        <p>
+            Stay cozy and stylish this winter with our Winter Wonderland Wrap Hoodie. 
+        </p>
+        <p>Price: $200</p>
+        <button  class="btn btn-primary" onclick="addToCart('Winter Wonderland ', 200 )">Add to Cart</button>   
+               
+     </div> 
+</div>
+</div>
+
+
+
+<div class=" feature-card-wrapper d-flex justify-content-between" >
+    <div class=" product  feature-card seller-card text-center">
+        <h3>
+            Cozy Crystal
+        </h3>
+        <img src="./images/1.jfif" class="img-thumbnail" id="img" alt="...">
+        <p >
+            Stay cozy and stylish this winter with our Cozy Crystal Cove Hoodie Hoodie. 
+        </p>
+        <p>Price: $100</p>
+<button class="btn btn-primary" onclick="addToCart('  Cozy Crystal', 100)"> Add to Cart</button>
+    </div>
+    <div class="  product feature-card text-center"  >
+        <h3>
+            Champion Hoodie
+        </h3>
+        <img src="./images/2.jfif" class="img-thumbnail" id="img" alt="...">
+        <p>
+            Stay cozy and stylish this winter with our Astroworld Hoodie. 
+        </p>
+        <p>Price: $150</p>
+        <button class="btn btn-primary" onclick="addToCart('Champion Hoodie', 150)"> Add to Cart</button>            
+    </div>
+    <div class=" product feature-card text-center">
+        <h3>
+            Alpine Aura
+        </h3>
+        <img src="./images/3.jfif" class="img-thumbnail" id="img" alt="...">
+        <p>
+            Stay cozy and stylish this winter with our Alpine Aura Attire Hoodie. 
+        </p>
+        <p>Price: $200</p>
+        <button class="btn btn-primary" onclick="addToCart('  Alpine Aura', 200)"> Add to Cart</button>           
+     </div> 
+     
+</div>
+</div>
+
+
+<div class=" feature-card-wrapper d-flex justify-content-between" >
+    <div class=" product  feature-card seller-card text-center">
+        <h3>
+            Astroworld Hoodie 
+        </h3>
+        <img src="./images/1.jfif" class="img-thumbnail" id="img" alt="...">
+        <p >
+            Stay cozy and stylish this winter with our Astroworld Hoodie. 
+        </p>
+        <p>Price: $100</p>
+<button class="btn btn-primary" onclick="addToCart(' Astroworld Hoodie ', 100)"> Add to Cart</button>
+    </div>
+    <div class="  product feature-card text-center"  >
+        <h3>
+            Champion Hoodie
+        </h3>
+        <img src="./images/2.jfif" class="img-thumbnail" id="img" alt="...">
+        <p>
+            Stay cozy and stylish this winter with our Astroworld Hoodie. 
+        </p>
+        <p>Price: $150</p>
+        <button class="btn btn-primary" onclick="addToCart(' Champion Hoodie', 150)"> Add to Cart</button>            
+    </div>
+    <div class=" product feature-card text-center">
+        <h3>
+             Winter Whisper 
+        </h3>
+        <img src="./images/3.jfif" class="img-thumbnail" id="img" alt="...">
+        <p>
+            Stay cozy and stylish this winter with our Astroworld Hoodie. 
+        </p>
+        <p>Price: $200</p>
+        <button class="btn btn-primary" onclick="addToCart('Winter Whisper ', 200)"> Add to Cart</button>           
+     </div> 
+     
+</div>
+</div>
+
+
+
+    <div class=" feature-card-wrapper d-flex justify-content-between" >
+        <div class=" product feature-card text-center">
+            <h3>
+                Frosty Threads 
+            </h3>
+            <img src="./images/6.5.jfif" class="img-thumbnail" id="img" alt="...">
+            <p>
+                Stay cozy and stylish this winter with our Frosty Threads Hoodie Hoodie. 
+            </p>
+            <p>Price: $200</p>
+            <button  class="btn btn-primary" onclick="addToCart('Frosty Threads  ', 200)">Add to Cart</button>   
+                   
+         </div> 
+         <div class=" product feature-card text-center">
+            <h3>
+                Winter Hoddie
+            </h3>
+            <img src="./images/6.5.jfif" class="img-thumbnail" id="img" alt="...">
+            <p>
+                Stay cozy and stylish this winter with our Winter Hoodie. 
+            </p>
+            <p>Price: $200</p>
+            <button  class="btn btn-primary" onclick="addToCart('  Winter Hoddie', 200 )">Add to Cart</button>   
+                   
+         </div> 
+         <div class="  product feature-card text-center"  >
+            <h3>
+                Champion Hoodie
+            </h3>
+            <img src="./images/2.jfif" class="img-thumbnail" id="img" alt="...">
+            <p>
+                Stay cozy and stylish this winter with our Champion Hoodie. 
+            </p>
+            <p>Price: $150</p>
+            <button class="btn btn-primary" onclick="addToCart('Champion Hoodie', 150)"> Add to Cart</button>            
+        </div>
+    </div>
+</div>
+<!-- Bo
+    otstrap JS and jQuery (Make sure to include these scripts at the end of the body) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- Your custom JavaScript file -->
+
+
+
+
+
+
+<footer class="mt-10 bg-black">
+  
+    <div class="additional-info" >
+        <p>&copy; 2023 Winter market . All rights reserved.</p>
+        <p>Privacy Policy | Terms of Service</p>
+      </div>
+  </footer>
+
+<script src="index.js">
+  </script>
+</body>
+</html>

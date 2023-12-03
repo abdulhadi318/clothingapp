@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login/Sign Up</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+ 
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+      body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+
+
+      </style>
+</head>
+<body>
+  
+<!-- Navbar -->
+
+
+ 
+
+  
+  <div id="loginForm" style="display: block;">
+    <h2>Login</h2>
+    <form onsubmit="return loginUser()">
+        <input type="text" id="loginUsername" placeholder="Username" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button class="btn btn-primary" type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="#" onclick="showSignupForm()">Sign up</a></p>
+</div>
+
+<div id="signupForm" style="display: none;">
+    <h2>Sign Up</h2>
+    <form onsubmit="return signupUser()">
+        <input type="text" id="signupUsername" placeholder="Username" required>
+        <input type="email" id="signupEmail" placeholder="Email" required>
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <button class="btn btn-primary"  type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
+</div>
+
+<script>
+    function showSignupForm() {
+        document.getElementById('loginForm').style.display = 'none';
+        document.getElementById('signupForm').style.display = 'block';
+    }
+
+    function showLoginForm() {
+        document.getElementById('signupForm').style.display = 'none';
+        document.getElementById('loginForm').style.display = 'block';
+    }
+
+    function loginUser() {
+        let username = document.getElementById('loginUsername').value;
+        let password = document.getElementById('loginPassword').value;
+
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+
+        let user = users.find(u => u.username === username && u.password === password);
+
+        if (user) {
+            alert('Login successful!');
+            window.location.href = 'cart.html'; // Redirect to the checkout page
+        } else {
+            alert('Invalid username or password');
+        }
+
+        return false; // Prevent form submission
+    }
+
+    function signupUser() {
+        let username = document.getElementById('signupUsername').value;
+        let email = document.getElementById('signupEmail').value;
+        let password = document.getElementById('signupPassword').value;
+
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+
+        // Check if the username is already taken
+        if (users.find(u => u.username === username)) {
+            alert('Username already taken. Please choose a different one.');
+            return false; // Prevent form submission
+        }
+
+        // Add the new user to the array
+        users.push({ username, email, password });
+
+        // Update local storage
+        localStorage.setItem('users', JSON.stringify(users));
+
+        alert('Account created successfully! You can now login.');
+
+        // Show the login form after signup
+        showLoginForm();
+
+        return false; // Prevent form submission
+    }
+</script>
+
+
+<script src="index.js"></script>
+
+
+
+
+
+</body>
+</html>

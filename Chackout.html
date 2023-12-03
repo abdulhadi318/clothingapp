@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+  <style>
+    body {
+     
+      font-family: Arial, sans-serif;
+   
+    }
+
+    #paymentForm {
+      width: 300px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 30px;
+      margin-left: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+  
+    #successMessage {
+      color: green;
+      margin-top: 10px;
+    }
+
+    #errorMessage {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+  <title>Payment Details</title>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav  style= " background-color: black; display: flex;" class= " navbar navbar-expand-lg d-flex justify-content-between ">
+  <span style=" font-size: large; color: rgb(0, 195, 255);" class=" text-2xl text-sky-500"> Winter Market</span>  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div id="navbarNav">
+      <ul class="  navbar-nav ml-auto">
+          <li class="nav-item ">
+              <a class="nav-link text-white" href="home.html">Home</a>
+          </li>
+          <li class="nav-item ">
+              <a class="nav-link text-white" href="Product.html">Products</a>
+          </li>
+  
+       <li class="nav-item font-bold">
+          <a class="nav-link font-bold text-white" href="signup.html">Login-Signup</a>
+      </li>
+
+     
+      </ul>
+  </div>
+</nav>
+
+
+
+
+  <div >
+    <h2 class="text-4xl text-center mt-4" >Payment Details</h2>
+    <div class="d-flex justify-content-center" id=" paymentForm">
+      <form  class="align-items-center" id="checkoutForm">
+      
+        <label for="cardNumber">Name:</label>
+        <input  class="border-2 rounded" type="text" placeholder="Enter Name" required>
+        <label for="cardNumber">Email:</label>
+        <input  class="border-2 rounded" type="text" id="Number" placeholder="Enter Email " required>
+        <label for="cardNumber">Shipping:</label>
+        <input  class="border-2 rounded" type="text" id="Number" placeholder="Enter Shipping adress " required>
+        <label for="cardNumber">Card Number:</label>
+        <input  class="border-2 rounded" type="text" id="Contact" placeholder="Enter Contact number" required>
+        <input  class="border-2 rounded" type="text" id="cardNumber" name="cardNumber" placeholder="Enter card number" required>
+        <label for="expiryDate">Expiry Date:</label>
+        <input  class="border-2 rounded" type="text" id="expiryDate" name="expiryDate" placeholder="MM/YYYY" required>
+        <label for="cvv">CVV:</label>
+        <input  class="border-2 rounded" type="text" id="cvv" name="cvv" placeholder="Enter CVV" required>
+    <a  href="home.html" class="btn btn-primary ">Place and order</a> 
+        <div id="successMessage"></div>
+        <div id="errorMessage"></div>
+      </form>
+      
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('checkoutForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      let Number = document.getElementById('Number').value;
+      let cardNumber = document.getElementById('cardNumber').value;
+      let expiryDate = document.getElementById('expiryDate').value;
+      let cvv = document.getElementById('cvv').value;
+
+      // Simple validation for demonstration purposes
+     
+      if (cardNumber.length !== 13 || !/^\d+$/.test(Number)) {
+        displayErrorMessage('Invalid card number. Please enter a valid 16-digit card number.');
+        return;
+      }
+
+      if (cardNumber.length !== 16 || !/^\d+$/.test(cardNumber)) {
+        displayErrorMessage('Invalid card number. Please enter a valid 16-digit card number.');
+        return;
+      }
+
+      if (!/^\d{2}\/\d{4}$/.test(expiryDate)) {
+        displayErrorMessage('Invalid expiry date. Please enter a valid MM/YYYY format.');
+        return;
+      }
+
+      if (cvv.length !== 3 || !/^\d+$/.test(cvv)) {
+        displayErrorMessage('Invalid CVV. Please enter a valid 3-digit CVV.');
+        return;
+      }
+
+      // If all validations pass, show success message (you can replace this with actual payment processing logic)
+      displaySuccessMessage('Payment submitted successfully!');
+      // Additional logic such as clearing the cart or redirecting to a thank you page can be added here
+    });
+
+    function displaySuccessMessage(message) {
+      document.getElementById('successMessage').innerHTML = message;
+      document.getElementById('errorMessage').innerHTML = '';
+    }
+
+    function displayErrorMessage(message) {
+      document.getElementById('errorMessage').innerHTML = message;
+      document.getElementById('successMessage').innerHTML = '';
+    }
+
+  </script>
+  <footer style="background-color: black;" class="mt-10 ">
+  
+    <div class="additional-info" >
+        <p>&copy; 2023 Winter market . All rights reserved.</p>
+        <p>Privacy Policy | Terms of Service</p>
+      </div>
+  </footer>
+</body>
+</html>
